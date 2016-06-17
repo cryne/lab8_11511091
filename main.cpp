@@ -124,7 +124,24 @@ int main(int argc, char const *argv[])
 		}
 		if (opcion==4)
 		{
-			/* code */
+			int opcion2=0;
+			while(opcion2!=2){
+				for (int i = 0; i < disponibles.size(); ++i){
+					cout<<i<<"-"<<disponibles[i]->toString()<<endl;
+				}
+				int comprar;
+				cout<<"ingrese la posicion que desea eliminar"<<endl;
+				cin>>comprar;
+				if(comprar<disponibles.size()){
+					comprados.push_back(disponibles[comprar]);
+					disponibles.erase(disponibles.begin()+comprar);
+					cout<<"robot comprado exitosamente"<<endl;
+					cout<<"Que desea hacer?\n1-continuar comprando\n2-salir de compras"<<endl;
+					cin>>opcion2;
+				}else{
+					cout<<"posicion ingresada no existe"<<endl;
+				}
+			}
 		}
 		if (opcion==5)
 		{
