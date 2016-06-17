@@ -5,7 +5,7 @@
 using std::string;
 using std::stringstream;
 
-Abastecedor::Abastacedor(string serie,string material,double amperios,double precio):Robot(serie,material,amperios,precio){
+Abastecedor::Abastecedor(string serie,string material,double amperios,double precio):Robot(serie,material,amperios,precio){
 
 }	
 string Abastecedor::toString(){

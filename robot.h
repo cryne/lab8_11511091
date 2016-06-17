@@ -10,7 +10,7 @@ class Robot
 	double precio;
 public:
 	Robot(string,string,double,double);
-	string toString();
+	virtual string toString();
 	string getSerie();
 	string getMaterial();
 	double getAmperios();

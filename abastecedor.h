@@ -3,9 +3,9 @@
 #include <string>
 using std::string;
 
-class Abastacedor:public Robot
+class Abastecedor:public Robot
 {
 public:
-	Abastacedor(string,string,double,double);	
+	Abastecedor(string,string,double,double);	
 	string toString();
 };
