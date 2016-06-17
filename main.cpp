@@ -150,7 +150,24 @@ int main(int argc, char const *argv[])
 		}
 		if (opcion==6)
 		{
-			/* code */
+			int opcion2=0;
+			while(opcion2!=2){
+				for (int i = 0; i < comprados.size(); ++i){
+					cout<<i<<"-"<<comprados[i]->toString()<<endl;
+				}
+				int borrar;
+				cout<<"ingrese la posicion que desea botar"<<endl;
+				cin>>borrar;
+				if(borrar<comprados.size()){
+					comprados.erase(comprados.begin()+borrar);
+					cout<<"robot botado correctamente"<<endl;
+					cout<<"Que desea hacer?\n1-continuar botandos\n2-salir de botadero"<<endl;
+					cin>>opcion2;
+
+				}else{
+					cout<<"posicion ingresada no existe"<<endl;
+				}
+			}
 		}
 	}
 	return 0;
