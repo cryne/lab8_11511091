@@ -130,9 +130,10 @@ int main(int argc, char const *argv[])
 					cout<<i<<"-"<<disponibles[i]->toString()<<endl;
 				}
 				int comprar;
-				cout<<"ingrese la posicion que desea eliminar"<<endl;
+				cout<<"ingrese la posicion que desea comprar"<<endl;
 				cin>>comprar;
 				if(comprar<disponibles.size()){
+					dinero=dinero-disponibles[comprar]->getPrecio();
 					comprados.push_back(disponibles[comprar]);
 					disponibles.erase(disponibles.begin()+comprar);
 					cout<<"robot comprado exitosamente"<<endl;
